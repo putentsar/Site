@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Бургер",
+    "description": "говяжий",
+    "img": "гречка.jpg"
+  },
+  {
+    "name": "Салат",
+    "description": "Крабовый",
+    "img": "гречка.jpg"
+  },
+  {
+    "name": "Стейк",
+    "description": "говяжий",
+    "img": "гречка.jpg"
+  },
+  {
+    "name": "Пицца",
+    "description": "маргарита",
+    "img": "гречка.jpg"
+  },
+  {
+    "name": "Роллы",
+    "description": "филадельфия",
+    "img": "гречка.jpg"
+  },
+  {
+    "name": "Блины",
+    "description": "со сгущенкой",
+    "img": "гречка.jpg"
+  },
+  {
+    "name": "Торт",
+    "description": "Наполеон",
+    "img": "гречка.jpg"
+  },
+  {
+    "name": "Минеральная вода",
+    "description": "bon aqua",
+    "img": "гречка.jpg"
+  }
+]
