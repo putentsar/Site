@@ -304,6 +304,7 @@ but.addEventListener('click',function(){//событие для кнопки but
 		for(let pick_bu of pick_but){//цикл пербора кнопок выбора ресторана и навешивание события клика на них 
 			pick_bu.addEventListener('click',function(){// функция для вывода меню выбраного ресторана на экран
 				let x = 0;
+		       orderprice.innerHTML="0";
 				if(this.id == note.id)
 				{
 					menuArea.innerHTML="";
@@ -333,53 +334,54 @@ but.addEventListener('click',function(){//событие для кнопки but
 							break;
 							case 2:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_2;
+								col.innerHTML=note.set_2;
 							row.appendChild(col);
 							break;
 							case 3:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_3;
+								col.innerHTML=note.set_3;
 							row.appendChild(col);
 							break;
 							case 4:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_4;
+								col.innerHTML=note.set_4;
 							row.appendChild(col);
 							break;
 							case 5:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_5;
+								col.innerHTML=note.set_5;
 							row.appendChild(col);
 							break;
 							case 6:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_6;
+								col.innerHTML=note.set_6;
 							row.appendChild(col);
 							break;
 							case 7:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_7;
+								col.innerHTML=note.set_7;
 							row.appendChild(col);
 							break;
 							case 8:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_8;
+								col.innerHTML=note.set_8;
 							row.appendChild(col);
 							break;
 							case 9:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_9;
+								col.innerHTML=note.set_9;
 							row.appendChild(col);
 							break;
 							case 10:  
 							
 							col = document.createElement('div');
-							col.innerHTML=note.set_10;
+								col.innerHTML=note.set_10;
 							row.appendChild(col);
 							break;
 						}
-						
+
 						let decre = document.createElement('button');
+						decre.className="btn btn-outline-danger";
 						decre.innerHTML='-';
 						row.appendChild(decre);
 						let input = document.createElement('input');
@@ -388,6 +390,7 @@ but.addEventListener('click',function(){//событие для кнопки but
 						input.value='0';
 						row.appendChild(input);
 						let incre = document.createElement('button');
+						incre.className="btn btn-outline-danger";
 						incre.innerHTML='+';
 						row.appendChild(incre);
 						incre.addEventListener('click',function(){//кнопка увеличения кол-во выбраного блюда
@@ -421,16 +424,7 @@ but.addEventListener('click',function(){//событие для кнопки but
 							modbody.appendChild(span);
 							let div;
 							console.log(minputarr);
-							/*for (let minputunit of minputarr){
-								if(Number(minputunit.value)>=1)
-								{
-								console.log(minputunit);
-								let inputdiv;
-								inputdiv = document.createElement('div');
-								inputdiv.innerHTML=unitdata1.name;
-								modbody.appendChild(inputdiv);
-								}
-							}*/
+						
 							
 							
 							div = document.createElement('div');
@@ -462,15 +456,16 @@ but.addEventListener('click',function(){//событие для кнопки but
 								div = document.createElement('div');
 								div.innerHTML="Быстрая доствка  +20%"
 								modbody.appendChild(div);
+								div = document.createElement('div');
+								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*1.2*0.7;
+								modbody.appendChild(div);
 								hr = document.createElement('hr');
 								hr.className='featurette-divider';
 								modbody.appendChild(hr);
 								div = document.createElement('div');
-								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*0.9;
+								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*1.2;
 								modbody.appendChild(div);
-								div = document.createElement('div');
-								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*0.7;
-								modbody.appendChild(div);
+								
 							}
 							else {
 								hr = document.createElement('hr');
@@ -509,7 +504,7 @@ but.addEventListener('click',function(){//событие для кнопки but
 	
 });
 
-next.addEventListener('click', function(){//нажатие на кнопку пагинации next, отрезаются следующие от текущих 10 пунктов финального json файла и выводят их на экран, остальные функции такие же
+next.addEventListener('click', function(){
 	this.value = Number(this.value)+1;
 	console.log(this.value);
 	let pageNum = Number(this.value);
@@ -549,6 +544,7 @@ next.addEventListener('click', function(){//нажатие на кнопку п�
 		
 		for(let pick_bu of pick_but){
 			pick_bu.addEventListener('click',function(){
+			orderprice.innerHTML="0";
 				let x = 0;
 				if(this.id == note.id)
 				{
@@ -579,53 +575,54 @@ next.addEventListener('click', function(){//нажатие на кнопку п�
 							break;
 							case 2:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_2;
+								col.innerHTML=note.set_2;
 							row.appendChild(col);
 							break;
 							case 3:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_3;
+								col.innerHTML=note.set_3;
 							row.appendChild(col);
 							break;
 							case 4:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_4;
+								col.innerHTML=note.set_4;
 							row.appendChild(col);
 							break;
 							case 5:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_5;
+								col.innerHTML=note.set_5;
 							row.appendChild(col);
 							break;
 							case 6:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_6;
+								col.innerHTML=note.set_6;
 							row.appendChild(col);
 							break;
 							case 7:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_7;
+								col.innerHTML=note.set_7;
 							row.appendChild(col);
 							break;
 							case 8:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_8;
+								col.innerHTML=note.set_8;
 							row.appendChild(col);
 							break;
 							case 9:  
 							col = document.createElement('div');
-							col.innerHTML=note.set_9;
+								col.innerHTML=note.set_9;
 							row.appendChild(col);
 							break;
 							case 10:  
 							
 							col = document.createElement('div');
-							col.innerHTML=note.set_10;
+								col.innerHTML=note.set_10;
 							row.appendChild(col);
 							break;
 						}
 						
 						let decre = document.createElement('button');
+						decre.className="btn btn-outline-danger";
 						decre.innerHTML='-';
 						row.appendChild(decre);
 						let input = document.createElement('input');
@@ -634,6 +631,7 @@ next.addEventListener('click', function(){//нажатие на кнопку п�
 						input.value='0';
 						row.appendChild(input);
 						let incre = document.createElement('button');
+						incre.className="btn btn-outline-danger";
 						incre.innerHTML='+';
 						row.appendChild(incre);
 						incre.addEventListener('click',function(){
@@ -666,6 +664,16 @@ next.addEventListener('click', function(){//нажатие на кнопку п�
 							modbody.appendChild(span);
 							let div;
 							console.log(minputarr);
+							/*for (let minputunit of minputarr){
+								if(Number(minputunit.value)>=1)
+								{
+								console.log(minputunit);
+								let inputdiv;
+								inputdiv = document.createElement('div');
+								inputdiv.innerHTML=unitdata1.name;
+								modbody.appendChild(inputdiv);
+								}
+							}*/
 							
 							
 							div = document.createElement('div');
@@ -695,15 +703,16 @@ next.addEventListener('click', function(){//нажатие на кнопку п�
 								div = document.createElement('div');
 								div.innerHTML="Быстрая доствка  +20%"
 								modbody.appendChild(div);
+								div = document.createElement('div');
+								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*1.2*0.7;
+								modbody.appendChild(div);
 								hr = document.createElement('hr');
 								hr.className='featurette-divider';
 								modbody.appendChild(hr);
 								div = document.createElement('div');
-								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*0.9;
+								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*1.2;
 								modbody.appendChild(div);
-								div = document.createElement('div');
-								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*0.7;
-								modbody.appendChild(div);
+								
 							}
 							else {
 								hr = document.createElement('hr');
@@ -721,7 +730,7 @@ next.addEventListener('click', function(){//нажатие на кнопку п�
 								div = document.createElement('div');
 								div.innerHTML=Number(orderprice.textContent);
 								modbody.appendChild(div);
-							}//--
+							}//----------------------------------------------------
 							
 						});
 						
@@ -741,7 +750,7 @@ next.addEventListener('click', function(){//нажатие на кнопку п�
 	
 	
 });
-back.addEventListener('click', function(){//нажатие на кнопку пагинации back, отрезаются предыдущие от текущих 10 пунктов финального json файла и выводят их на экран, остальные функции такие же
+back.addEventListener('click', function(){
 	console.log(next.value);
 	if(next.value>=2)
 	{
@@ -784,6 +793,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 			
 			for(let pick_bu of pick_but){
 				pick_bu.addEventListener('click',function(){
+				orderprice.innerHTML="0";
 					let x = 0;
 					if(this.id == note.id)
 					{
@@ -808,59 +818,60 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 							x+=1;
 							switch(x) {
 								case 1:  
-								col = document.createElement('div');
-								col.innerHTML=note.set_1;
-								row.appendChild(col);
-								break;
-								case 2:  
-								col = document.createElement('div');
+							col = document.createElement('div');
+							col.innerHTML=note.set_1;
+							row.appendChild(col);
+							break;
+							case 2:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_2;
-								row.appendChild(col);
-								break;
-								case 3:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 3:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_3;
-								row.appendChild(col);
-								break;
-								case 4:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 4:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_4;
-								row.appendChild(col);
-								break;
-								case 5:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 5:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_5;
-								row.appendChild(col);
-								break;
-								case 6:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 6:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_6;
-								row.appendChild(col);
-								break;
-								case 7:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 7:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_7;
-								row.appendChild(col);
-								break;
-								case 8:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 8:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_8;
-								row.appendChild(col);
-								break;
-								case 9:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 9:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_9;
-								row.appendChild(col);
-								break;
-								case 10:  
-								
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 10:  
+							
+							col = document.createElement('div');
 								col.innerHTML=note.set_10;
-								row.appendChild(col);
-								break;
+							row.appendChild(col);
+							break;
 							}
 							
 							let decre = document.createElement('button');
+								decre.className="btn btn-outline-danger";
 							decre.innerHTML='-';
 							row.appendChild(decre);
 							let input = document.createElement('input');
@@ -869,6 +880,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 							input.value='0';
 							row.appendChild(input);
 							let incre = document.createElement('button');
+							 incre.className="btn btn-outline-danger";
 							incre.innerHTML='+';
 							row.appendChild(incre);
 							incre.addEventListener('click',function(){
@@ -901,6 +913,17 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 								modbody.appendChild(span);
 								let div;
 								console.log(minputarr);
+								/*for (let minputunit of minputarr){
+									if(Number(minputunit.value)>=1)
+									{
+									console.log(minputunit);
+									let inputdiv;
+									inputdiv = document.createElement('div');
+									inputdiv.innerHTML=unitdata1.name;
+									modbody.appendChild(inputdiv);
+									}
+								}*/
+								
 								
 								div = document.createElement('div');
 								div.innerHTML='Название : '+note.name;
@@ -929,15 +952,16 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 								div = document.createElement('div');
 								div.innerHTML="Быстрая доствка  +20%"
 								modbody.appendChild(div);
+								div = document.createElement('div');
+								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*1.2*0.7;
+								modbody.appendChild(div);
 								hr = document.createElement('hr');
 								hr.className='featurette-divider';
 								modbody.appendChild(hr);
 								div = document.createElement('div');
-								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*0.9;
+								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*1.2;
 								modbody.appendChild(div);
-								div = document.createElement('div');
-								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*0.7;
-								modbody.appendChild(div);
+								
 							}
 							else {
 								hr = document.createElement('hr');
@@ -955,7 +979,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 								div = document.createElement('div');
 								div.innerHTML=Number(orderprice.textContent);
 								modbody.appendChild(div);
-							}//--
+							}//----------------------------------------------------
 								
 							});
 							
@@ -971,7 +995,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 			}	
 		}
 	}
-	else{//если это крайние 10 пунктов, то выводятся они же, функции аналогичные
+	else{
 		let notes = finalres.slice(0, 10);
 		Table.innerHTML="";
 		console.log(notes);
@@ -1006,6 +1030,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 			
 			
 			for(let pick_bu of pick_but){
+			orderprice.innerHTML="0";
 				pick_bu.addEventListener('click',function(){
 					let x = 0;
 					if(this.id == note.id)
@@ -1031,59 +1056,61 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 							x+=1;
 							switch(x) {
 								case 1:  
-								col = document.createElement('div');
-								col.innerHTML=note.set_1;
-								row.appendChild(col);
-								break;
-								case 2:  
-								col = document.createElement('div');
+							col = document.createElement('div');
+							col.innerHTML=note.set_1;
+							row.appendChild(col);
+							break;
+							case 2:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_2;
-								row.appendChild(col);
-								break;
-								case 3:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 3:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_3;
-								row.appendChild(col);
-								break;
-								case 4:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 4:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_4;
-								row.appendChild(col);
-								break;
-								case 5:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 5:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_5;
-								row.appendChild(col);
-								break;
-								case 6:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 6:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_6;
-								row.appendChild(col);
-								break;
-								case 7:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 7:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_7;
-								row.appendChild(col);
-								break;
-								case 8:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 8:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_8;
-								row.appendChild(col);
-								break;
-								case 9:  
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 9:  
+							col = document.createElement('div');
 								col.innerHTML=note.set_9;
-								row.appendChild(col);
-								break;
-								case 10:  
-								
-								col = document.createElement('div');
+							row.appendChild(col);
+							break;
+							case 10:  
+							
+							col = document.createElement('div');
 								col.innerHTML=note.set_10;
-								row.appendChild(col);
-								break;
+							row.appendChild(col);
+							break;
 							}
 							
 							let decre = document.createElement('button');
+							decre.className="btn btn-outline-danger";
+							decre.className="btn btn-outline-danger";
 							decre.innerHTML='-';
 							row.appendChild(decre);
 							let input = document.createElement('input');
@@ -1092,6 +1119,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 							input.value='0';
 							row.appendChild(input);
 							let incre = document.createElement('button');
+							incre.className="btn btn-outline-danger";
 							incre.innerHTML='+';
 							row.appendChild(incre);
 							incre.addEventListener('click',function(){
@@ -1124,7 +1152,16 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 								modbody.appendChild(span);
 								let div;
 								console.log(minputarr);
-							
+								/*for (let minputunit of minputarr){
+									if(Number(minputunit.value)>=1)
+									{
+									console.log(minputunit);
+									let inputdiv;
+									inputdiv = document.createElement('div');
+									inputdiv.innerHTML=unitdata1.name;
+									modbody.appendChild(inputdiv);
+									}
+								}*/
 								
 								
 								div = document.createElement('div');
@@ -1142,7 +1179,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 								div = document.createElement('div');
 								div.innerHTML='Rate : '+note.rate;
 								modbody.appendChild(div);
-								if(firstcheck.checked)//условия для применения специальных выбранных услуг---------------------------------------------
+						if(firstcheck.checked)//условия для применения специальных выбранных услуг---------------------------------------------
 							{
 								hr = document.createElement('hr');
 								hr.className='featurette-divider';
@@ -1154,15 +1191,16 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 								div = document.createElement('div');
 								div.innerHTML="Быстрая доствка  +20%"
 								modbody.appendChild(div);
+								div = document.createElement('div');
+								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*1.2*0.7;
+								modbody.appendChild(div);
 								hr = document.createElement('hr');
 								hr.className='featurette-divider';
 								modbody.appendChild(hr);
 								div = document.createElement('div');
-								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*0.9;
+								div.innerHTML="Итоговая цена : "+Number(orderprice.textContent)*1.2;
 								modbody.appendChild(div);
-								div = document.createElement('div');
-								div.innerHTML="Если ваш заказ приедет холодным, то он будет стоить: "+Number(orderprice.textContent)*0.7;
-								modbody.appendChild(div);
+								
 							}
 							else {
 								hr = document.createElement('hr');
@@ -1180,7 +1218,7 @@ back.addEventListener('click', function(){//нажатие на кнопку п�
 								div = document.createElement('div');
 								div.innerHTML=Number(orderprice.textContent);
 								modbody.appendChild(div);
-							}//--
+							}//----------------------------------------------------
 								
 							});
 							

@@ -2,41 +2,41 @@
   {
     "name": "Бургер",
     "description": "говяжий",
-    "img": "гречка.jpg"
+    "img": "бургер.jpg"
   },
   {
     "name": "Салат",
     "description": "Крабовый",
-    "img": "гречка.jpg"
+    "img": "краб.jpg"
   },
   {
     "name": "Стейк",
     "description": "говяжий",
-    "img": "гречка.jpg"
+    "img": "стейк.jpg"
   },
   {
     "name": "Пицца",
     "description": "маргарита",
-    "img": "гречка.jpg"
+    "img": "пицца.jpg"
   },
   {
     "name": "Роллы",
     "description": "филадельфия",
-    "img": "гречка.jpg"
+    "img": "ролы.jpg"
   },
   {
     "name": "Блины",
     "description": "со сгущенкой",
-    "img": "гречка.jpg"
+    "img": "блин.jpg"
   },
   {
     "name": "Торт",
     "description": "Наполеон",
-    "img": "гречка.jpg"
+    "img": "торт.jpg"
   },
   {
     "name": "Минеральная вода",
     "description": "bon aqua",
-    "img": "гречка.jpg"
+    "img": "вода.jpg"
   }
 ]
