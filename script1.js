@@ -509,7 +509,7 @@ but.addEventListener('click',function(){//событие для кнопки but
 	
 });
 
-next.addEventListener('click', function(){
+next.addEventListener('click', function(){//нажатие на кнопку пагинации next, отрезаются следующие от текущих 10 пунктов финального json файла и выводят их на экран, остальные функции такие же
 	this.value = Number(this.value)+1;
 	console.log(this.value);
 	let pageNum = Number(this.value);
@@ -666,16 +666,6 @@ next.addEventListener('click', function(){
 							modbody.appendChild(span);
 							let div;
 							console.log(minputarr);
-							/*for (let minputunit of minputarr){
-								if(Number(minputunit.value)>=1)
-								{
-								console.log(minputunit);
-								let inputdiv;
-								inputdiv = document.createElement('div');
-								inputdiv.innerHTML=unitdata1.name;
-								modbody.appendChild(inputdiv);
-								}
-							}*/
 							
 							
 							div = document.createElement('div');
@@ -751,7 +741,7 @@ next.addEventListener('click', function(){
 	
 	
 });
-back.addEventListener('click', function(){
+back.addEventListener('click', function(){//нажатие на кнопку пагинации back, отрезаются предыдущие от текущих 10 пунктов финального json файла и выводят их на экран, остальные функции такие же
 	console.log(next.value);
 	if(next.value>=2)
 	{
@@ -911,17 +901,6 @@ back.addEventListener('click', function(){
 								modbody.appendChild(span);
 								let div;
 								console.log(minputarr);
-								/*for (let minputunit of minputarr){
-									if(Number(minputunit.value)>=1)
-									{
-									console.log(minputunit);
-									let inputdiv;
-									inputdiv = document.createElement('div');
-									inputdiv.innerHTML=unitdata1.name;
-									modbody.appendChild(inputdiv);
-									}
-								}*/
-								
 								
 								div = document.createElement('div');
 								div.innerHTML='Название : '+note.name;
@@ -992,7 +971,7 @@ back.addEventListener('click', function(){
 			}	
 		}
 	}
-	else{
+	else{//если это крайние 10 пунктов, то выводятся они же, функции аналогичные
 		let notes = finalres.slice(0, 10);
 		Table.innerHTML="";
 		console.log(notes);
@@ -1145,16 +1124,7 @@ back.addEventListener('click', function(){
 								modbody.appendChild(span);
 								let div;
 								console.log(minputarr);
-								/*for (let minputunit of minputarr){
-									if(Number(minputunit.value)>=1)
-									{
-									console.log(minputunit);
-									let inputdiv;
-									inputdiv = document.createElement('div');
-									inputdiv.innerHTML=unitdata1.name;
-									modbody.appendChild(inputdiv);
-									}
-								}*/
+							
 								
 								
 								div = document.createElement('div');
