@@ -10,3 +10,15 @@
 	margin:auto;
 	
 }
+#next
+{
+	float:right; 
+	vertical-align:bottom;
+	
+}
+#back
+{
+	width:70px;
+	margin:auto;
+	
+}
